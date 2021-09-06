@@ -1,0 +1,151 @@
+/*
+Player Music CSS stylesheet 
+Author : Waled Kamal Fikrey
+Copyrighted Code (Free Used)
+*/
+
+/*@Global Fonts*/
+/*Font Name : Cairo */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --backgroundMain: #05061f;
+}
+
+body {
+  background-color: black;
+  transition: background-color 0.4s;
+  font-family: "Cairo", sans-serif;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+.container .player {
+  display: grid;
+  background: white;
+  height: 250px;
+  margin-top: 75px;
+  grid-template-columns: auto auto auto;
+  direction: ltr;
+  border-radius: 10px;
+}
+
+.container .player .playStopButton {
+  width: 260px;
+  background-color: #5a03a9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container .player .playStopButton .icon {
+  font-size: 175px;
+  padding-left: 40px;
+  color: white;
+  position: relative;
+  left: 25px;
+  top: 38px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.container .player .infoMusic {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.range {
+  display: flex;
+  justify-content: space-around;
+}
+
+.songName {
+  font-size: 37px;
+}
+
+.Author {
+  color: #a77474;
+}
+
+.MyRange {
+  width: 300px;
+  height: 1px;
+  position: relative;
+  top: 14px;
+}
+
+input[type="range"] {
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #666;
+  opacity: 0.5;
+  width: 10px;
+  height: 26px;
+}
+
+.playList {
+  background: #252525;
+  height: 100%;
+  color: white;
+  padding: 10px;
+}
+.playList ul {
+  list-style: none;
+  overflow: auto;
+  height: 250px;
+}
+.playList ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.1s background-color;
+  display: flex;
+  justify-content: space-between;
+}
+
+.playList ul li:hover {
+  background-color: #16507c;
+}
+
+.active {
+  background-color: rgb(109, 13, 37);
+  transition: 0.4s ease-in;
+}
+.play,
+.fa-music {
+  font-size: 35px;
+}
+
+.volume {
+  transform: rotate(270deg);
+  height: 1px;
+}
+
+/*Webkit Custom*/
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4d5458;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4d5458;
+  width: 1px;
+}
